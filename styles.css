@@ -10,7 +10,7 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 38px;
 }
 
 .left-side {
@@ -22,7 +22,7 @@
 }
 
 .nav-link {
-    height: 20px;
+    height: 22px;
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
 }
@@ -44,4 +44,45 @@
 .search-items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.search-item {
+    position: relative;
+}
+
+.search-item-img-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+
+.img-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.img-text .subtitle {
+    transition: 1s;
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text:hover .subtitle {
+    font-weight: 600;
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
 }

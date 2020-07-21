@@ -25,33 +25,24 @@
             <div class="content">
                 <div class="search-items">
                     <div class="search-item">
-                        <div class="search-item-img-background" style="background-image:url(images/brewdog1.jpg)"></div>
+                        <div class="search-item-img-background" style="background-image:url(images/beers.jpg)"></div>
                         <div class="img-text">
-                            <div class="logo">
-                                <img src="images/logo/search1.png" alt="">
-                            </div>
                             <div class="subtitle">
                                 Search for a beer by its name.
                             </div>
                         </div>
                     </div>
                     <div class="search-item">
-                        <div class="search-item-img-background" style="background-image:url(images/food2.jpg)"></div>
+                        <div class="search-item-img-background" style="background-image:url(images/food.jpg)"></div>
                         <div class="img-text">
-                            <div class="logo">
-                                <img src="images/logo/food1.png" alt="">
-                            </div>
                             <div class="subtitle">
                                 Search for all beers that match a certain food.
                             </div>
                         </div>
                     </div>
                     <div class="search-item">
-                        <div class="search-item-img-background" style="background-image:url(images/brewing1.jpg)"></div>
+                        <div class="search-item-img-background" style="background-image:url(images/brewing.jpg)"></div>
                         <div class="img-text">
-                            <div class="logo">
-                                <img src="images/logo/cask.png" alt="">
-                            </div>
                             <div class="subtitle">
                                 Search for all beers brewed before a certain date.
                             </div>
@@ -61,4 +52,17 @@
             </div>
         </div>
     </body>
+    <script>
+        const searchItems = document.querySelectorAll('.search-item')
+
+        searchItems.forEach(searchItem => {
+                searchItem.addEventListener('mouseover', () => {
+                    searchItem.childNodes[1].classList.add('img-darken');
+                })
+
+                searchItem.addEventListener('mouseout', () => {
+                    searchItem.childNodes[1].classList.remove('img-darken');
+                })
+        })
+    </script>
 </html>
