@@ -24,7 +24,7 @@
             </div>
             <div class="content">
                 <div class="search-items">
-                    <div class="search-item">
+                    <div class="search-item" id="search_name">
                         <div class="search-item-img-background" style="background-image:url(images/beers.jpg)"></div>
                         <div class="img-text">
                             <div class="subtitle">
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="search-item">
+                    <div class="search-item" id="search_food">
                         <div class="search-item-img-background" style="background-image:url(images/food.jpg)"></div>
                         <div class="img-text">
                             <div class="subtitle">
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="search-item">
+                    <div class="search-item" id="search_date">
                         <div class="search-item-img-background" style="background-image:url(images/brewing.jpg)"></div>
                         <div class="img-text">
                             <div class="subtitle">
@@ -58,6 +58,17 @@
         searchItems.forEach(searchItem => {
                 searchItem.addEventListener('mouseover', () => {
                     searchItem.childNodes[1].classList.add('img-darken');
+
+                    searchItem.addEventListener('click', function() {
+                        switch(searchItem.id) {
+                                case 'search_name': window.open('search_name','_self');
+                                         break;
+                                case 'search_food': window.open('search_food','_self');
+                                         break;
+                                case 'search_date': window.open('search_date','_self');
+                                         break;
+                        }
+                    })
                 })
 
                 searchItem.addEventListener('mouseout', () => {
