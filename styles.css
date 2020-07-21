@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav > .left-side > div {
+    margin: 5px;
+}
+
+.nav-link {
+    height: 20px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link a:hover {
+    color: black;
+}
