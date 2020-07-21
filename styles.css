@@ -1,3 +1,12 @@
+.body {
+    margin: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -30,4 +39,9 @@
 
 .nav-link a:hover {
     color: black;
+}
+
+.search-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
