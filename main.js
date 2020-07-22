@@ -3,7 +3,7 @@
 function saveInput(e,operation)
 {
     // when the user presses ENTER the input is saved OR the user inserted a date and pressed search
-    if(e.keyCode===13 || searchButtonPressed()) {
+    if(e.keyCode===13 || searchButtonPressed(operation)) {
 
         var input;
         var url_filter;
@@ -52,7 +52,7 @@ function getRequest(url)
         {
             // by default we receive the response in the string format, we need to parse into JSON
             var data = JSON.parse(request.response);
-            console.log(data); // to delete after all done
+            createTable(data);
         }
         else
         {
@@ -81,17 +81,40 @@ function handleDate()
 }
 
 // function that returns true if the user has pressed the search button
-function searchButtonPressed()
+function searchButtonPressed(operation)
 {
-    // Altough the user pressed the search button he might not entered a date, so we need to address that
-    var date = document.getElementById("date-bar").value;
-    // checks if date is a null, undefined or empty string
-    if(date)
+    // this only occurs if the operation is = 'date'
+    if(operation==='date')
     {
-        return true;
+        // Altough the user pressed the search button he might not entered a date, so we need to address that
+        var date = document.getElementById("date-bar").value;
+        // checks if date is a null, undefined or empty string
+        if(date)
+        {
+            return true;
+        }
+        else
+        {
+            alert('You need to insert a date in order to search!');
+        }
     }
-    else
+}
+
+function createTable(data)
+{
+    if(data.length > 0)
     {
-        alert('You need to insert a date in order to search!');
+        var aux = "";
+
+        data.forEach((u) => {
+            aux += "<tr>";
+            aux += "<td>"+u.id+"</td>";
+            aux += "<td>"+u.name+"</td>";
+            aux += "<td>"+u.description+"</td>";
+            aux += "<td>"+u.first_brewed+"</td>";
+
+        })
+
+        document.getElementById("data").innerHTML = aux;
     }
 }

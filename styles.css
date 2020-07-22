@@ -103,4 +103,29 @@ input[type=text]:focus {
 
 .search-button {
     margin-top: 10px;
+
+}
+
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+th {
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+td {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
