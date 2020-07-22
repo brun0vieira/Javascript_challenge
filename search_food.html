@@ -25,12 +25,14 @@
             <div class="content">
                 <div class="search-box">
                     <div class="search-box-text">
-                        Search for all beers that match a certain food:
+                        Search for all beers that match a certain <strong>food</strong>:
                     </div>
                     <div class="search-box-bar">
-                        <input type="text" name="search-bar" placeholder="Food to match...">
+                        <input type="text" name="search-bar" placeholder="Food to match..." id="userInput" onkeypress="saveInput(event,'food')">
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script src="main.js"></script>
+</html>

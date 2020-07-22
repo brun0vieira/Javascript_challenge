@@ -25,12 +25,14 @@
             <div class="content">
                 <div class="search-box">
                     <div class="search-box-text">
-                        Search for a beer by its name:
+                        Search for a beer by its <strong>name</strong>:
                     </div>
                     <div class="search-box-bar">
-                        <input type="text" name="search-bar" placeholder="Beer name...">
+                        <input type="text" name="search-bar" placeholder="Beer name..." id="userInput" onkeypress="saveInput(event,'name')">
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script src="main.js"></script>
+</html>
