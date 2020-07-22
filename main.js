@@ -1,9 +1,7 @@
-// Function responsible for saving the input by the user.
-// Then calls the correspondent function to make the GET request according to the operation
-
+// function responsible for handling which url parameter filter to use according to the operation
+// i.e., if the operation is search for a beer by its name then the url_param filter is ?beer_name
 function saveInput(e,operation)
 {
-    //var buttonPressed = searchButtonPressed();
     // when the user presses ENTER the input is saved OR the user inserted a date and pressed search
     if(e.keyCode===13 || searchButtonPressed()) {
 
@@ -28,6 +26,8 @@ function saveInput(e,operation)
     }
 }
 
+// function responsible for making the final url used to make the GET request
+// (concatenates the beers url with its filters)
 function defineUrl(url_filter,url_filter_value)
 {
     var url_without_filter = 'https://api.punkapi.com/v2/beers/';
@@ -37,6 +37,7 @@ function defineUrl(url_filter,url_filter_value)
     getRequest(url);
 }
 
+// function responsible for making the GET request
 function getRequest(url)
 {
 
@@ -61,6 +62,7 @@ function getRequest(url)
     }
 }
 
+// function self explanatory
 function handleDate()
 {
     // dateSelected format: yyyy-mm-dd
@@ -78,6 +80,7 @@ function handleDate()
     return date;
 }
 
+// function that returns true if the user has pressed the search button
 function searchButtonPressed()
 {
     // Altough the user pressed the search button he might not entered a date, so we need to address that
@@ -91,5 +94,4 @@ function searchButtonPressed()
     {
         alert('You need to insert a date in order to search!');
     }
-
 }
