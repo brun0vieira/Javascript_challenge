@@ -102,10 +102,13 @@ function searchButtonPressed(operation)
 
 function createTable(data)
 {
+    // there's any data to insert into the table ?
+    // if not, this if isn't executed
     if(data.length > 0)
     {
         var aux = "";
 
+        // loop through each result 
         data.forEach((u) => {
             aux += "<tr>";
             aux += "<td>"+u.id+"</td>";
