@@ -18,7 +18,7 @@
                 </div>
                 <div class="right-side">
                     <div class="author">
-                        <div>developed by BRUNO VIEIRA</div>
+                        <div>Punk API Collab developed by BRUNO VIEIRA</div>
                     </div>
                 </div>
             </div>
@@ -53,6 +53,8 @@
         </div>
     </body>
     <script>
+        // Simple script to check when the user is hovering over the pictures in order to decrease the brightness.
+        // When the user clicks a picture, it checks the div's id to open the correspondent html page.
         const searchItems = document.querySelectorAll('.search-item')
 
         searchItems.forEach(searchItem => {
@@ -61,11 +63,11 @@
 
                     searchItem.addEventListener('click', function() {
                         switch(searchItem.id) {
-                                case 'search_name': window.open('search_name','_self');
+                                case 'search_name': window.open('search_name.html','_self');
                                          break;
-                                case 'search_food': window.open('search_food','_self');
+                                case 'search_food': window.open('search_food.html','_self');
                                          break;
-                                case 'search_date': window.open('search_date','_self');
+                                case 'search_date': window.open('search_date.html','_self');
                                          break;
                         }
                     })
