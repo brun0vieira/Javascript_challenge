@@ -108,7 +108,7 @@ function createTable(data)
     {
         var aux = "";
 
-        // loop through each result 
+        // loop through each result
         data.forEach((u) => {
             aux += "<tr>";
             aux += "<td>"+u.id+"</td>";
@@ -119,5 +119,9 @@ function createTable(data)
         })
 
         document.getElementById("data").innerHTML = aux;
+    }
+    else
+    {
+        alert('There\'s no data for your input.');
     }
 }
