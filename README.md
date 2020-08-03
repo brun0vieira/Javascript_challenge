@@ -1,2 +1,2 @@
 # Javascript_challenge
-Javascript challenge for DebtGes
+Javascript challenge for Software Engineering Internship.
